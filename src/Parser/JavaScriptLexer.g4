@@ -1,33 +1,3 @@
-/*
- * The MIT License (MIT)
- *
- * Copyright (c) 2014 by Bart Kiers (original author) and Alexandre Vitorelli (contributor -> ported to CSharp)
- * Copyright (c) 2017 by Ivan Kochurkin (Positive Technologies):
-    added ECMAScript 6 support, cleared and transformed to the universal grammar.
- * Copyright (c) 2018 by Juan Alvarez (contributor -> ported to Go)
- * Copyright (c) 2019 by Student Main (contributor -> ES2020)
- *
- * Permission is hereby granted, free of charge, to any person
- * obtaining a copy of this software and associated documentation
- * files (the "Software"), to deal in the Software without
- * restriction, including without limitation the rights to use,
- * copy, modify, merge, publish, distribute, sublicense, and/or sell
- * copies of the Software, and to permit persons to whom the
- * Software is furnished to do so, subject to the following
- * conditions:
- *
- * The above copyright notice and this permission notice shall be
- * included in all copies or substantial portions of the Software.
- *
- * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
- * EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES
- * OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
- * NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT
- * HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,
- * WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
- * FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
- * OTHER DEALINGS IN THE SOFTWARE.
- */
 lexer grammar JavaScriptLexer;
 
 channels { ERROR }
@@ -136,24 +106,24 @@ Case:                           'case';
 Else:                           'else';
 New:                            'new';
 Var:                            'var';
-Catch:                          'catch';
-Finally:                        'finally';
+Catch:                          'catch'; /*Не будет реализовано */
+Finally:                        'finally'; /*Не будет реализовано */
 Return:                         'return';
 Void:                           'void';
 Continue:                       'continue';
 For:                            'for';
-Switch:                         'switch';
+Switch:                         'switch'; /*Не будет реализовано */
 While:                          'while';
-Debugger:                       'debugger';
+Debugger:                       'debugger'; /*Не будет реализовано */
 Function:                       'function';
 This:                           'this';
-With:                           'with';
+With:                           'with'; /*Не будет реализовано */
 Default:                        'default';
 If:                             'if';
-Throw:                          'throw';
+Throw:                          'throw'; /*Не будет реализовано */
 Delete:                         'delete';
 In:                             'in';
-Try:                            'try';
+Try:                            'try'; /*Не будет реализовано */
 As:                             'as';
 From:                           'from';
 
@@ -167,21 +137,21 @@ Const:                          'const';
 Export:                         'export';
 Import:                         'import';
 
-Async:                          'async';
-Await:                          'await';
+Async:                          'async'; /*Не будет реализовано */
+Await:                          'await'; /*Не будет реализовано */
 
 /// The following tokens are also considered to be FutureReservedWords
 /// when parsing strict mode
 
-Implements:                     'implements' {this->IsStrictMode()}?;
+Implements:                     'implements' {this->IsStrictMode()}?; /*Не будет реализовано */
 Let:                            'let' {this->IsStrictMode()}?;
 Private:                        'private' {this->IsStrictMode()}?;
 Public:                         'public' {this->IsStrictMode()}?;
-Interface:                      'interface' {this->IsStrictMode()}?;
-Package:                        'package' {this->IsStrictMode()}?;
+Interface:                      'interface' {this->IsStrictMode()}?; /*Не будет реализовано */
+Package:                        'package' {this->IsStrictMode()}?; /*Не будет реализовано */
 Protected:                      'protected' {this->IsStrictMode()}?;
 Static:                         'static' {this->IsStrictMode()}?;
-Yield:                          'yield' {this->IsStrictMode()}?;
+Yield:                          'yield' {this->IsStrictMode()}?; /*Не будет реализовано */
 
 /// Identifier Names and Identifiers
 

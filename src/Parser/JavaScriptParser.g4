@@ -1,33 +1,3 @@
-/*
- * The MIT License (MIT)
- *
- * Copyright (c) 2014 by Bart Kiers (original author) and Alexandre Vitorelli (contributor -> ported to CSharp)
- * Copyright (c) 2017 by Ivan Kochurkin (Positive Technologies):
-    added ECMAScript 6 support, cleared and transformed to the universal grammar.
- * Copyright (c) 2018 by Juan Alvarez (contributor -> ported to Go)
- * Copyright (c) 2019 by Student Main (contributor -> ES2020)
- *
- * Permission is hereby granted, free of charge, to any person
- * obtaining a copy of this software and associated documentation
- * files (the "Software"), to deal in the Software without
- * restriction, including without limitation the rights to use,
- * copy, modify, merge, publish, distribute, sublicense, and/or sell
- * copies of the Software, and to permit persons to whom the
- * Software is furnished to do so, subject to the following
- * conditions:
- *
- * The above copyright notice and this permission notice shall be
- * included in all copies or substantial portions of the Software.
- *
- * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
- * EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES
- * OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
- * NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT
- * HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,
- * WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
- * FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
- * OTHER DEALINGS IN THE SOFTWARE.
- */
 parser grammar JavaScriptParser;
 
 options {
@@ -60,13 +30,13 @@ statement
     | continueStatement
     | breakStatement
     | returnStatement
-    | yieldStatement
-    | withStatement
-    | labelledStatement
-    | switchStatement
-    | throwStatement
-    | tryStatement
-    | debuggerStatement
+    | yieldStatement /* Не будет реализовано */
+    | withStatement /* Не будет реализовано */
+    | labelledStatement /* Не будет реализовано */
+    | switchStatement /* Не будет реализовано */
+    | throwStatement /* Не будет реализовано */
+    | tryStatement /* Не будет реализовано */
+    | debuggerStatement /* Не будет реализовано */
     | functionDeclaration
     ;
 
@@ -154,7 +124,7 @@ iterationStatement
     | For '(' (expressionSequence | variableDeclarationList)? ';' expressionSequence? ';' expressionSequence? ')' statement   # ForStatement
     | For '(' (singleExpression | variableDeclarationList) In expressionSequence ')' statement                                # ForInStatement
     // strange, 'of' is an identifier. and this->p("of") not work in sometime.
-    | For Await? '(' (singleExpression | variableDeclarationList) Identifier{this->p("of")}? expressionSequence ')' statement  # ForOfStatement
+    | For Await? '(' (singleExpression | variableDeclarationList) Identifier{this->p("of")}? expressionSequence ')' statement  # ForOfStatement /* Await Не будет реализовано */
     ;
 
 varModifier  // let, const - ECMAScript 6
@@ -175,27 +145,27 @@ returnStatement
     : Return ({this->notLineTerminator()}? expressionSequence)? eos
     ;
 
-yieldStatement
+yieldStatement /* Не будет реализовано */
     : Yield ({this->notLineTerminator()}? expressionSequence)? eos
     ;
 
-withStatement
+withStatement /* Не будет реализовано */
     : With '(' expressionSequence ')' statement
     ;
 
-switchStatement
+switchStatement /* Не будет реализовано */
     : Switch '(' expressionSequence ')' caseBlock
     ;
 
-caseBlock
+caseBlock /* Не будет реализовано */
     : '{' caseClauses? (defaultClause caseClauses?)? '}'
     ;
 
-caseClauses
+caseClauses /* Не будет реализовано */
     : caseClause+
     ;
 
-caseClause
+caseClause /* Не будет реализовано */
     : Case expressionSequence ':' statementList?
     ;
 
@@ -203,32 +173,32 @@ defaultClause
     : Default ':' statementList?
     ;
 
-labelledStatement
+labelledStatement /* Не будет реализовано */
     : Identifier ':' statement
     ;
 
-throwStatement
+throwStatement /* Не будет реализовано */
     : Throw {this->notLineTerminator()}? expressionSequence eos
     ;
 
-tryStatement
+tryStatement /* Не будет реализовано */
     : Try block (catchProduction finallyProduction? | finallyProduction)
     ;
 
-catchProduction
+catchProduction /* Не будет реализовано */
     : Catch ('(' assignable? ')')? block
     ;
 
-finallyProduction
+finallyProduction /* Не будет реализовано */
     : Finally block
     ;
 
-debuggerStatement
+debuggerStatement /* Не будет реализовано */
     : Debugger eos
     ;
 
 functionDeclaration
-    : Async? Function '*'? Identifier '(' formalParameterList? ')' '{' functionBody '}'
+    : Async? Function '*'? Identifier '(' formalParameterList? ')' '{' functionBody '}' /* Async Не будет реализовано */
     ;
 
 classDeclaration
@@ -291,7 +261,7 @@ objectLiteral
 propertyAssignment
     : propertyName ':' singleExpression                                             # PropertyExpressionAssignment
     | '[' singleExpression ']' ':' singleExpression                                 # ComputedPropertyExpressionAssignment
-    | Async? '*'? propertyName '(' formalParameterList?  ')'  '{' functionBody '}'  # FunctionProperty
+    | Async? '*'? propertyName '(' formalParameterList?  ')'  '{' functionBody '}'  # FunctionProperty /* Async Не будет реализовано */
     | getter '(' ')' '{' functionBody '}'                                           # PropertyGetter
     | setter '(' formalParameterArg ')' '{' functionBody '}'                        # PropertySetter
     | Ellipsis? singleExpression                                                    # PropertyShorthand
@@ -447,24 +417,24 @@ keyword
     | Else
     | New
     | Var
-    | Catch
-    | Finally
+    | Catch /* Не будет реализовано */
+    | Finally /* Не будет реализовано */
     | Return
     | Void
     | Continue
     | For
-    | Switch
+    | Switch /* Не будет реализовано */
     | While
-    | Debugger
+    | Debugger /* Не будет реализовано */
     | Function
     | This
-    | With
+    | With /* Не будет реализовано */
     | Default
     | If
-    | Throw
+    | Throw /* Не будет реализовано */
     | Delete
     | In
-    | Try
+    | Try /* Не будет реализовано */
 
     | Class
     | Enum
@@ -481,9 +451,9 @@ keyword
     | Package
     | Protected
     | Static
-    | Yield
-    | Async
-    | Await
+    | Yield /* Не будет реализовано */
+    | Async /* Не будет реализовано */
+    | Await /* Не будет реализовано */
     | From
     | As
     ;
