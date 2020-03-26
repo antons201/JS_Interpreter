@@ -6,6 +6,7 @@ src/Parser/gen
 src/Parser/generated/**
 
 *.tokens
+*.sed
 
 !/generated/JavaScriptParserBaseVisitor.h
 !/generated/JavaScriptParserBaseVisitor.cpp
