@@ -1,24 +1,28 @@
 #include <iostream>
+#include "Parser/JSBaseVisitor/JavaScriptParserBaseVisitor.h"
 
 #include "antlr4-runtime.h"
 #include "JavaScriptLexer.h"
 #include "JavaScriptParser.h"
+#include "Parser/AST/TreeVisitor.h"
 
 using namespace antlr4;
 
 int main() {
-    ANTLRInputStream input("{var x = 5; var y = 6;}");
+    ANTLRInputStream input("var x = 5;"); //Enter your code
     JavaScriptLexer lexer(&input);
     CommonTokenStream tokens(&lexer);
 
-    tokens.fill();
-    for (auto token : tokens.getTokens()) {
-        std::cout << token->toString() << std::endl;
-    }
-
     JavaScriptParser parser(&tokens);
-    tree::ParseTree* tree = parser.block();
+    JavaScriptParserBaseVisitor visitor;
+    tree::ParseTree* tree = parser.statementList();
+    visitor.visit(tree);
 
-    std::cout << tree->toStringTree(&parser) << std::endl << std::endl;
+    auto Treevisitor = new TreeVisitor();
+    RootNode* ASTtree = visitor.getTree();
+    ASTtree->accept(Treevisitor);
+
+    std::cout << Treevisitor->getTextTree();
+    delete Treevisitor;
     return 0;
 }

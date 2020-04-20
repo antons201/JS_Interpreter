@@ -9,9 +9,15 @@ add_executable(antlr4 main.cpp
         ${PROJECT_SOURCE_DIR}/Parser/generated/JavaScriptLexer.cpp
         ${PROJECT_SOURCE_DIR}/Parser/generated/JavaScriptParser.cpp
         ${PROJECT_SOURCE_DIR}/Parser/generated/JavaScriptParserBaseListener.cpp
-        ${PROJECT_SOURCE_DIR}/Parser/generated/JavaScriptParserBaseVisitor.cpp
+        ${PROJECT_SOURCE_DIR}/Parser/JSBaseVisitor/JavaScriptParserBaseVisitor.cpp
         ${PROJECT_SOURCE_DIR}/Parser/generated/JavaScriptParserListener.cpp
-        ${PROJECT_SOURCE_DIR}/Parser/generated/JavaScriptParserVisitor.cpp)
+        ${PROJECT_SOURCE_DIR}/Parser/generated/JavaScriptParserVisitor.cpp
+        ${PROJECT_SOURCE_DIR}/Parser/AST/Nodes.h
+        ${PROJECT_SOURCE_DIR}/Parser/AST/Visitor.h
+        ${PROJECT_SOURCE_DIR}/Parser/AST/TreeVisitor.cpp
+        ${PROJECT_SOURCE_DIR}/Parser/AST/TreeVisitor.h
+        ${PROJECT_SOURCE_DIR}/Parser/AST/Utils.h
+        ${PROJECT_SOURCE_DIR}/Parser/AST/Utils.cpp)
 
 include_directories(${PROJECT_SOURCE_DIR}/Parser/generated)
 
