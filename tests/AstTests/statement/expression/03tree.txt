@@ -1,0 +1,9 @@
+Program
+| 
++—VariableDeclaration
+  | 
+  +—VariableDeclarator
+    | 
+    +—Identifier (source)
+    | 
+    +—StringLiteral ('\\u0061')

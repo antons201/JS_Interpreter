@@ -1,0 +1,17 @@
+Program
+| 
++—ExpressionStatement
+  | 
+  +—SequenceExpression
+    | 
+    +—MemberExpression
+      | 
+      +—MemberExpression
+      | | 
+      | +—Identifier (universe)
+      | | 
+      | +—SequenceExpression
+      |   | 
+      |   +—NumericLiteral (42)
+      | 
+      +—Identifier (galaxies)

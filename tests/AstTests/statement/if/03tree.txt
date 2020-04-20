@@ -1,0 +1,15 @@
+Program
+| 
++—IfStatement
+  | 
+  +—SequenceExpression
+  | | 
+  | +—Identifier (morning)
+  | 
+  +—VariableDeclaration
+    | 
+    +—VariableDeclarator
+      | 
+      +—Identifier (x)
+      | 
+      +—NumericLiteral (0)

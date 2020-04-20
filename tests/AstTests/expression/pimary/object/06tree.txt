@@ -1,0 +1,23 @@
+Program
+| 
++—ExpressionStatement
+  | 
+  +—SequenceExpression
+    | 
+    +—AssignmentExpression (=)
+      | 
+      +—Identifier (x)
+      | 
+      +—ObjectExpression
+        | 
+        +—Property
+        | | 
+        | +—Identifier (x)
+        | | 
+        | +—NumericLiteral (1)
+        | 
+        +—Property
+          | 
+          +—Identifier (x)
+          | 
+          +—NumericLiteral (2)

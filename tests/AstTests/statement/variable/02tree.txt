@@ -1,0 +1,11 @@
+Program
+| 
++—VariableDeclaration
+  | 
+  +—VariableDeclarator
+  | | 
+  | +—Identifier (x)
+  | 
+  +—VariableDeclarator
+    | 
+    +—Identifier (y)

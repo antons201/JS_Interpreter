@@ -1,0 +1,13 @@
+Program
+| 
++—FunctionDeclaration
+  | 
+  +—Identifier (a)
+  | 
+  +—FunctionBody
+    | 
+    +—ReturnStatement
+      | 
+      +—SequenceExpression
+        | 
+        +—StringLiteral ('hello world')

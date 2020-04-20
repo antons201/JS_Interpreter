@@ -1,0 +1,15 @@
+Program
+| 
++—IfStatement
+  | 
+  +—SequenceExpression
+  | | 
+  | +—Identifier (morning)
+  | 
+  +—ExpressionStatement
+    | 
+    +—SequenceExpression
+      | 
+      +—CallExpression
+        | 
+        +—Identifier (goodMorning)

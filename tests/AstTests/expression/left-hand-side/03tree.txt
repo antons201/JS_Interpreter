@@ -1,0 +1,11 @@
+Program
+| 
++—ExpressionStatement
+  | 
+  +—SequenceExpression
+    | 
+    +—MemberExpression
+      | 
+      +—Identifier (universe)
+      | 
+      +—Identifier (milkyway)

@@ -1,0 +1,9 @@
+Program
+| 
++—VariableDeclaration
+  | 
+  +—VariableDeclarator
+    | 
+    +—Identifier (x)
+    | 
+    +—NumericLiteral (42)

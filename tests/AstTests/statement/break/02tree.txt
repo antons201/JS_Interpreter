@@ -1,0 +1,23 @@
+Program
+| 
++—WhileStatement
+  | 
+  +—SequenceExpression
+  | | 
+  | +—BooleanLiteral (true)
+  | 
+  +—BlockStatement
+    | 
+    +—IfStatement
+      | 
+      +—SequenceExpression
+      | | 
+      | +—Identifier (x)
+      | 
+      +—BreakStatement
+      | 
+      +—ExpressionStatement
+        | 
+        +—SequenceExpression
+          | 
+          +—Identifier (y)

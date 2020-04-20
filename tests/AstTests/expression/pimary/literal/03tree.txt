@@ -1,0 +1,38 @@
+Program
+| 
++—ExpressionStatement
+| | 
+| +—SequenceExpression
+|   | 
+|   +—StringLiteral ("Hello")
+| 
++—ExpressionStatement
+| | 
+| +—SequenceExpression
+|   | 
+|   +—StringLiteral ("\n\r\t\v\b\f\\\'\"\0")
+| 
++—ExpressionStatement
+| | 
+| +—SequenceExpression
+|   | 
+|   +—StringLiteral ("\x61")
+| 
++—ExpressionStatement
+| | 
+| +—SequenceExpression
+|   | 
+|   +—StringLiteral ("Hello\nworld")
+| 
++—ExpressionStatement
+| | 
+| +—SequenceExpression
+|   | 
+|   +—StringLiteral ("Hello\02World")
+| 
++—ExpressionStatement
+  | 
+  +—SequenceExpression
+    | 
+    +—StringLiteral ("Hello\
+world")

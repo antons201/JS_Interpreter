@@ -1,0 +1,17 @@
+Program
+| 
++—ExpressionStatement
+  | 
+  +—SequenceExpression
+    | 
+    +—SequenceExpression
+      | 
+      +—FunctionExpression
+        | 
+        +—FunctionBody
+          | 
+          +—ReturnStatement
+            | 
+            +—SequenceExpression
+              | 
+              +—Identifier (x)

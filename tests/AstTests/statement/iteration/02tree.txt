@@ -1,0 +1,41 @@
+Program
+| 
++—WhileStatement
+  | 
+  +—SequenceExpression
+  | | 
+  | +—BinaryExpression (<)
+  |   | 
+  |   +—Identifier (x)
+  |   | 
+  |   +—NumericLiteral (10)
+  | 
+  +—BlockStatement
+    | 
+    +—ExpressionStatement
+    | | 
+    | +—SequenceExpression
+    |   | 
+    |   +—AssignmentExpression (=)
+    |     | 
+    |     +—Identifier (x)
+    |     | 
+    |     +—BinaryExpression (+)
+    |       | 
+    |       +—Identifier (x)
+    |       | 
+    |       +—NumericLiteral (1)
+    | 
+    +—ExpressionStatement
+      | 
+      +—SequenceExpression
+        | 
+        +—AssignmentExpression (=)
+          | 
+          +—Identifier (y)
+          | 
+          +—BinaryExpression (+)
+            | 
+            +—Identifier (y)
+            | 
+            +—NumericLiteral (1)

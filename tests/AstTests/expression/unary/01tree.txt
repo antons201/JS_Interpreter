@@ -1,0 +1,17 @@
+Program
+| 
++—ExpressionStatement
+| | 
+| +—SequenceExpression
+|   | 
+|   +—UnaryExpression (+)
+|     | 
+|     +—Identifier (x)
+| 
++—ExpressionStatement
+  | 
+  +—SequenceExpression
+    | 
+    +—UnaryExpression + (-)
+      | 
+      +—Identifier (x)

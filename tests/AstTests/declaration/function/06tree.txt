@@ -1,0 +1,21 @@
+Program
+| 
++—FunctionDeclaration
+  | 
+  +—Identifier (test)
+  | 
+  +—ParameterList
+  | | 
+  | +—Identifier (__proto__)
+  | 
+  +—FunctionBody
+    | 
+    +—ExpressionStatement
+      | 
+      +—SequenceExpression
+        | 
+        +—BinaryExpression (+)
+          | 
+          +—StringLiteral ("use strict")
+          | 
+          +—NumericLiteral (42)

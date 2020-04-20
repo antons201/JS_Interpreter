@@ -1,0 +1,15 @@
+Program
+| 
++—WhileStatement
+  | 
+  +—SequenceExpression
+  | | 
+  | +—BooleanLiteral (true)
+  | 
+  +—ExpressionStatement
+    | 
+    +—SequenceExpression
+      | 
+      +—CallExpression
+        | 
+        +—Identifier (doSomething)

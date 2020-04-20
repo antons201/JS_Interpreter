@@ -1,0 +1,21 @@
+Program
+| 
++—ExpressionStatement
+| | 
+| +—SequenceExpression
+|   | 
+|   +—BinaryExpression (+)
+|     | 
+|     +—Identifier (x)
+|     | 
+|     +—Identifier (y)
+| 
++—ExpressionStatement
+  | 
+  +—SequenceExpression
+    | 
+    +—BinaryExpression (-)
+      | 
+      +—Identifier (x)
+      | 
+      +—Identifier (y)

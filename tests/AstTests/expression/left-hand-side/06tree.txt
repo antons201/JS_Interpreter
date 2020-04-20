@@ -1,0 +1,15 @@
+Program
+| 
++—ExpressionStatement
+  | 
+  +—SequenceExpression
+    | 
+    +—MemberExpression
+      | 
+      +—Identifier (universe)
+      | 
+      +—SequenceExpression
+        | 
+        +—Identifier (galaxyName)
+        | 
+        +—Identifier (otherUselessName)

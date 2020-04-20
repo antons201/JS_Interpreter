@@ -1,0 +1,13 @@
+Program
+| 
++—FunctionDeclaration
+  | 
+  +—Identifier (test)
+  | 
+  +—ParameterList
+  | | 
+  | +—Identifier (t)
+  | | 
+  | +—Identifier (t)
+  | 
+  +—FunctionBody

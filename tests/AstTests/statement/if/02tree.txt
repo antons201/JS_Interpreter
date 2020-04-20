@@ -1,0 +1,17 @@
+Program
+| 
++—IfStatement
+  | 
+  +—SequenceExpression
+  | | 
+  | +—Identifier (morning)
+  | 
+  +—ExpressionStatement
+    | 
+    +—SequenceExpression
+      | 
+      +—SequenceExpression
+        | 
+        +—FunctionExpression
+          | 
+          +—FunctionBody

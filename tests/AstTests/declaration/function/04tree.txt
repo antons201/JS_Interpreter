@@ -1,0 +1,19 @@
+Program
+| 
++—FunctionDeclaration
+  | 
+  +—Identifier (eval)
+  | 
+  +—FunctionBody
+    | 
+    +—FunctionDeclaration
+      | 
+      +—Identifier (inner)
+      | 
+      +—FunctionBody
+        | 
+        +—ExpressionStatement
+          | 
+          +—SequenceExpression
+            | 
+            +—StringLiteral ("use strict")

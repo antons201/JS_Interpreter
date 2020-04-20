@@ -1,0 +1,31 @@
+Program
+| 
++—ExpressionStatement
+| | 
+| +—SequenceExpression
+|   | 
+|   +—NumericLiteral (1.492417830e-10)
+| 
++—ExpressionStatement
+| | 
+| +—SequenceExpression
+|   | 
+|   +—NumericLiteral (0e+100)
+| 
++—ExpressionStatement
+| | 
+| +—SequenceExpression
+|   | 
+|   +—NumericLiteral (0x0)
+| 
++—ExpressionStatement
+| | 
+| +—SequenceExpression
+|   | 
+|   +—NumericLiteral (015)
+| 
++—ExpressionStatement
+  | 
+  +—SequenceExpression
+    | 
+    +—NumericLiteral (0X20)

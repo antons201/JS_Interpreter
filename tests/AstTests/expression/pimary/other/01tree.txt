@@ -1,0 +1,29 @@
+Program
+| 
++—ExpressionStatement
+| | 
+| +—SequenceExpression
+|   | 
+|   +—NullLiteral (null)
+| 
++—ExpressionStatement
+| | 
+| +—SequenceExpression
+|   | 
+|   +—BinaryExpression (*)
+|     | 
+|     +—SequenceExpression
+|     | | 
+|     | +—BinaryExpression (+)
+|     |   | 
+|     |   +—NumericLiteral (1)
+|     |   | 
+|     |   +—NumericLiteral (2)
+|     | 
+|     +—NumericLiteral (3)
+| 
++—ExpressionStatement
+  | 
+  +—SequenceExpression
+    | 
+    +—NumericLiteral (42)

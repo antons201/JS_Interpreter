@@ -1,0 +1,13 @@
+Program
+| 
++—ExpressionStatement
+  | 
+  +—SequenceExpression
+    | 
+    +—CallExpression
+      | 
+      +—Identifier (foo)
+      | 
+      +—Identifier (bar)
+      | 
+      +—Identifier (baz)

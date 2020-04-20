@@ -1,0 +1,15 @@
+Program
+| 
++—ExpressionStatement
+  | 
+  +—SequenceExpression
+    | 
+    +—MemberExpression
+      | 
+      +—MemberExpression
+      | | 
+      | +—Identifier (universe)
+      | | 
+      | +—Identifier (milkyway)
+      | 
+      +—Identifier (solarsystem)

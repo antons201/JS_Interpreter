@@ -1,0 +1,19 @@
+Program
+| 
++—BlockStatement
+  | 
+  +—ExpressionStatement
+  | | 
+  | +—SequenceExpression
+  |   | 
+  |   +—CallExpression
+  |     | 
+  |     +—Identifier (doThis)
+  | 
+  +—ExpressionStatement
+    | 
+    +—SequenceExpression
+      | 
+      +—CallExpression
+        | 
+        +—Identifier (doThat)

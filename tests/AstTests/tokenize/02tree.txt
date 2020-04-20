@@ -1,0 +1,11 @@
+Program
+| 
++—ExpressionStatement
+  | 
+  +—SequenceExpression
+    | 
+    +—AssignmentExpression (=)
+      | 
+      +—Identifier (v)
+      | 
+      +—NumericLiteral (5)

@@ -1,0 +1,15 @@
+Program
+| 
++—FunctionDeclaration
+  | 
+  +—Identifier (hello)
+  | 
+  +—FunctionBody
+    | 
+    +—ExpressionStatement
+      | 
+      +—SequenceExpression
+        | 
+        +—CallExpression
+          | 
+          +—Identifier (sayHi)

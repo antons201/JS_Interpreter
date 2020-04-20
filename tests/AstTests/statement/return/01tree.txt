@@ -1,0 +1,13 @@
+Program
+| 
++—ExpressionStatement
+  | 
+  +—SequenceExpression
+    | 
+    +—SequenceExpression
+      | 
+      +—FunctionExpression
+        | 
+        +—FunctionBody
+          | 
+          +—ReturnStatement

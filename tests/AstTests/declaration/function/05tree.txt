@@ -1,0 +1,19 @@
+Program
+| 
++—VariableDeclaration
+  | 
+  +—VariableDeclarator
+    | 
+    +—Identifier (hi)
+    | 
+    +—FunctionExpression
+      | 
+      +—FunctionBody
+        | 
+        +—ExpressionStatement
+          | 
+          +—SequenceExpression
+            | 
+            +—CallExpression
+              | 
+              +—Identifier (sayHi)

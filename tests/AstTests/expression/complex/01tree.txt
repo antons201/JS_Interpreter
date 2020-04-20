@@ -1,0 +1,47 @@
+Program
+| 
++—ExpressionStatement
+  | 
+  +—SequenceExpression
+    | 
+    +—LogicalExpression (||)
+      | 
+      +—Identifier (a)
+      | 
+      +—LogicalExpression (&&)
+        | 
+        +—Identifier (b)
+        | 
+        +—BinaryExpression (|)
+          | 
+          +—Identifier (c)
+          | 
+          +—BinaryExpression (^)
+            | 
+            +—Identifier (d)
+            | 
+            +—BinaryExpression (&)
+              | 
+              +—Identifier (e)
+              | 
+              +—EqualityExpression (==)
+                | 
+                +—Identifier (f)
+                | 
+                +—BinaryExpression (<)
+                  | 
+                  +—Identifier (g)
+                  | 
+                  +—BinaryExpression (>>>)
+                    | 
+                    +—Identifier (h)
+                    | 
+                    +—BinaryExpression (+)
+                      | 
+                      +—Identifier (i)
+                      | 
+                      +—BinaryExpression (*)
+                        | 
+                        +—Identifier (j)
+                        | 
+                        +—Identifier (k)

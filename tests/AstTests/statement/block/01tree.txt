@@ -1,0 +1,9 @@
+Program
+| 
++—BlockStatement
+  | 
+  +—ExpressionStatement
+    | 
+    +—SequenceExpression
+      | 
+      +—Identifier (foo)

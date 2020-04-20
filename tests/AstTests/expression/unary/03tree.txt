@@ -1,0 +1,9 @@
+Program
+| 
++—ExpressionStatement
+  | 
+  +—SequenceExpression
+    | 
+    +—UnaryExpression (Delete)
+      | 
+      +—Identifier (x)

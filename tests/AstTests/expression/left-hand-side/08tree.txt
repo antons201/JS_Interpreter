@@ -1,0 +1,27 @@
+Program
+| 
++—ExpressionStatement
+  | 
+  +—SequenceExpression
+    | 
+    +—MemberExpression
+      | 
+      +—CallExpression
+      | | 
+      | +—MemberExpression
+      | | | 
+      | | +—CallExpression
+      | | | | 
+      | | | +—Identifier (universe)
+      | | | | 
+      | | | +—NumericLiteral (42)
+      | | | 
+      | | +—Identifier (galaxies)
+      | | 
+      | +—NumericLiteral (14)
+      | | 
+      | +—NumericLiteral (3)
+      | | 
+      | +—NumericLiteral (77)
+      | 
+      +—Identifier (milkyway)
