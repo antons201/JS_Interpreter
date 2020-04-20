@@ -51,10 +51,10 @@ sourceElement
 statement
     : block
     | variableStatement
-    | importStatement
-    | exportStatement
+    | importStatement /* Не будет реализовано */
+    | exportStatement /* Не будет реализовано */
     | emptyStatement
-    | classDeclaration
+    | classDeclaration /* Не будет реализовано */
     | expressionStatement
     | ifStatement
     | iterationStatement
@@ -83,7 +83,7 @@ importStatement
     : Import importFromBlock
     ;
 
-importFromBlock
+importFromBlock /* Не будет реализовано */
     : importDefault? (importNamespace | moduleItems) importFrom eos
     | StringLiteral eos
     ;
@@ -92,7 +92,7 @@ moduleItems
     : '{' (aliasName ',')* (aliasName ','?)? '}'
     ;
 
-importDefault
+importDefault /* Не будет реализовано */
     : aliasName ','
     ;
 
@@ -108,12 +108,12 @@ aliasName
     : identifierName (As identifierName )?
     ;
 
-exportStatement
+exportStatement /* Не будет реализовано */
     : Export (exportFromBlock | declaration) eos    # ExportDeclaration
     | Export Default singleExpression eos           # ExportDefaultDeclaration
     ;
 
-exportFromBlock
+exportFromBlock /* Не будет реализовано */
     : importNamespace importFrom eos
     | moduleItems importFrom? eos
     ;
@@ -150,12 +150,12 @@ ifStatement
 
 
 iterationStatement
-    : Do statement While '(' expressionSequence ')' eos                                                                 # DoStatement
+    : Do statement While '(' expressionSequence ')' eos                                                                 # DoStatement  /* Не будет реализовано */
     | While '(' expressionSequence ')' statement                                                                        # WhileStatement
-    | For '(' (expressionSequence | variableDeclarationList)? ';' expressionSequence? ';' expressionSequence? ')' statement   # ForStatement
-    | For '(' (singleExpression | variableDeclarationList) In expressionSequence ')' statement                                # ForInStatement
+    | For '(' (expressionSequence | variableDeclarationList)? ';' expressionSequence? ';' expressionSequence? ')' statement   # ForStatement  /* Не будет реализовано */
+    | For '(' (singleExpression | variableDeclarationList) In expressionSequence ')' statement                                # ForInStatement  /* Не будет реализовано */
     // strange, 'of' is an identifier. and this->p("of") not work in sometime.
-    | For Await? '(' (singleExpression | variableDeclarationList) Identifier{this->p("of")}? expressionSequence ')' statement  # ForOfStatement /* Await Не будет реализовано */
+    | For Await? '(' (singleExpression | variableDeclarationList) Identifier{this->p("of")}? expressionSequence ')' statement  # ForOfStatement  /* Не будет реализовано */
     ;
 
 varModifier  // let, const - ECMAScript 6
@@ -180,7 +180,7 @@ yieldStatement /* Не будет реализовано */
     : Yield ({this->notLineTerminator()}? expressionSequence)? eos
     ;
 
-withStatement /* Не будет реализовано */
+withStatement /* With не будет реализовано */
     : With '(' expressionSequence ')' statement
     ;
 
